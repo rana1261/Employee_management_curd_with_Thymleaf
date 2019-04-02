@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Edit Employee</h1>  
+<form method="POST" th:object="${emp}" th:action="@{/editsave}">    
+<table >    
+<tr>  
+<td></td>    
+<td><input type="hidden"  name="id" th:value="*{id}" /></td>  
+</tr> 
+  
+<tr>
+<td><label for="name">Name:</label></td>  
+<td><input type="text" id="name" name="name" th:value="*{name}"></input></td>  
+</tr> 
+   
+<tr>
+<td><label for="salary">Salary:</label></td>  
+<td><input type="text" id="salary" name="salary" th:value="*{salary}"></input></td> 
+</tr>
+            
+<tr>
+<td><label for="designation">Designation:</label></td>  
+<td><input type="text" id="designation" name="designation" th:value="*{designation}"></input></td> 
+</tr>  
+           
+<tr>    
+<td> </td>    
+<td><input type="submit" value="Edit Save" /></td>    
+</tr> 
+   
+</table>    
+</form>  
+</body>
+</html>
